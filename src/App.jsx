@@ -5,6 +5,8 @@ import Posts from './Dashboard/pages/Posts'
 import CreateEditPost from './Dashboard/pages/CreateEditPost'
 import Navbar from './Dashboard/navbar/Navbar'
 import Settings from './Dashboard/pages/Settings'
+import AdviseApp from './components/Advise-App/AdviseApp'
+import MoreApp from './components/MoreApp'
 
 
 
@@ -21,6 +23,9 @@ function App() {
           <Route path='edit-post/:ids' element={<CreateEditPost/>} />
           <Route path='settings' element={<Settings/>} />
         </Route>
+        <Route path='more-app' element={<MoreApp/>} />
+        <Route path='advise-app' element={<AdviseApp/>} />
+        
       </Routes>
     </Router>
   )

@@ -88,3 +88,17 @@ export const createPost = async (postData) => {
   const response = await axios.post(`${API_FETCH_URL}/posts`, postData);
   return response.data;
 };
+
+
+// ADVISE GENERATOR APP
+export const adviseGenerator = async function () {
+    const URL = `https://api.adviceslip.com/advice`
+
+    try{
+        const res = await axios.get(`${URL}`);
+        console.log('advise app', res);
+        return res.data;
+    } catch(err){
+        console.log('error', err);
+    }
+}
